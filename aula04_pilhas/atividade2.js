@@ -28,12 +28,19 @@ class TreasureChest {
             return;
         }
 
-        console.log(`Último tesouro: "${this.treasures[this.treasure.lenght - 1]}"`);
+        console.log(this.treasures.length);
+
+        console.log(`Último tesouro: "${this.treasures[this.treasures.length - 1]}"`);
+    }
+
+    chestSize()
+    {
+        return this.treasures.length;
     }
 
     isEmpty()
     {
-        return this.treasures.lenght === 0;
+        return this.treasures.length === 0;
     }
 
 }
@@ -55,6 +62,6 @@ tesouro.storeTreasure("Anel de ouro");
 tesouro.storeTreasure("Taça de Prata");
 tesouro.storeTreasure("Rubi");
 
-tesouro.lastTreasure();
+tesouro.peekTreasure();
 tesouro.chestSize();
 console.table(tesouro.treasures);

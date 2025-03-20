@@ -39,7 +39,7 @@ class LinkedList
 
             current = current.next; 
         }
-        
+
         current.next = newNode;   
     }
 
@@ -101,3 +101,21 @@ class LinkedList
         console.log(list + 'null');
     }
 }
+
+const trilha = new LinkedList();
+
+trilha.insertAtBeginning("Cachoeira");
+trilha.insertAtEnd("Caverna");
+trilha.insertAtBeginning("Mirante");
+
+trilha.printList();
+
+trilha.removeByValue("Caverna");
+
+if (trilha.find("Mirante") !== null)
+{
+    console.log("Mirante ainda está na lista!")
+}
+
+
+trilha.printList();

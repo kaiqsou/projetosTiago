@@ -1,9 +1,9 @@
-class Node      // node = nó
+class Node 
 {
     constructor(value)
     {
-        this.value = value; // "this" é um operador que faz referencia ao próprio objeto, chama os valores do objeto em si
-        this.next = null;   // ponteiro para o próximo nó
+        this.value = value;
+        this.next = null;   
     }
 }
 
@@ -11,10 +11,9 @@ class LinkedList
 {
     constructor()
     {   
-        this.head = null;   // a lista começa vazia
+        this.head = null;
     }
 
-    // inserir no começo da lista
     insertAtBeginning(value)
     {
         let newNode = new Node(value);
@@ -22,20 +21,19 @@ class LinkedList
         this.head = newNode;
     }
 
-    // inserir no final da lista
     insertAtEnd(value)
     {
         let newNode = new Node(value);
 
-        if (this.head === null)         // se a head é nula é porque não há elementos, então ele cria um novo nó
+        if (this.head === null)
         {
             this.head = newNode;
             return;
         }
 
         let current = this.head;
-        while (current.next !== null)  // se o current.next é diferente de nula, avançar pro próximo valor
-        {                              // caso seja nula, criará um novo objeto
+        while (current.next !== null) 
+        {                            
 
             current = current.next; 
         }
@@ -43,7 +41,6 @@ class LinkedList
         current.next = newNode;   
     }
 
-    // remover um nó por valor
     removeByValue(value)
     {
         if (this.head === null)
@@ -69,7 +66,6 @@ class LinkedList
         }
     }
 
-    // exibir a lista
     find(value)
     {
         let current = this.head;
@@ -83,10 +79,9 @@ class LinkedList
             current = current.next;
         }
 
-        return null;    // retorna null se o valor não for encontrado
+        return null;  
     }
 
-    // exibir a lista (opcional para ajudar na visualização)
     printList()
     {
         let current = this.head;
@@ -101,3 +96,12 @@ class LinkedList
         console.log(list + 'null');
     }
 }
+
+/*
+
+Inserir elementos no início e no fim da lista
+
+– Implemente uma função que crie uma lista encadeada e insira os valores 10, 20 e 30
+no início da lista e os valores 40, 50 e 60 no fim.
+
+*/

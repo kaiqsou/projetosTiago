@@ -131,13 +131,9 @@ if (tartarugas.find("Tartaruga lenta"))
     console.log("Tartaruga lenta ainda está na fila!")
 };
 
-if (tartarugas.find("Tartaruga veloz")){
-    if (tartarugas.find("Tartaruga veloz").next != null)
-    {
-        console.log("Tartaruga veloz está na frente de: " + tartarugas.find("Tartaruga veloz").next.value);
-    }
-    else
-    {
-        console.log("Tartaruga veloz está na última posição!");
+if (tartarugas.find("Tartaruga veloz"))
+{
+    if (tartarugas.find("Tartaruga veloz").next.value != null){
+        console.log("Tartaruga veloz está na frente de: " + tartarugas.find("Tartaruga veloz").next.value)
     }
 }

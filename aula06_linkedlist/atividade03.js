@@ -112,3 +112,32 @@ ser removido.
 durante a batalha.
 
 */
+
+const poderes = new LinkedList();
+
+poderes.insertAtBeginning("Raio Congelante");
+poderes.insertAtEnd("Escudo de Fogo");
+
+poderes.printList();
+
+poderes.insertAtBeginning("Chuva Ácida");
+poderes.insertAtEnd("Corrente de Vento");
+
+poderes.printList();
+
+console.log("Removendo... Raio Congelante");
+poderes.removeByValue("Raio Congelante");
+
+if (poderes.find("Escudo de Fogo"))
+{
+    console.log("Escudo de Fogo está disponível!");
+} 
+else
+{
+    console.log("Escudo de Fogo não está disponível!");
+}
+
+poderes.printList();
+
+
+

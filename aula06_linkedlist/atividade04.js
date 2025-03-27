@@ -105,3 +105,6 @@ Inserir elementos no início e no fim da lista
 no início da lista e os valores 40, 50 e 60 no fim.
 
 */
+
+const list = new LinkedList();
+

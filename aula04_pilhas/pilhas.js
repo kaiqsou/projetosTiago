@@ -26,7 +26,7 @@ class MinhaPilha {
         return ultimoItem; 
     }
 
-    // retornao elemento no topo da pilha sem removê-lo
+    // retorna o elemento no topo da pilha sem removê-lo
     topo()
     {
         if (this.tamanho === 0) 

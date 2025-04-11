@@ -110,7 +110,7 @@ setTimeout(
     {
         console.log("Atendimento finalizado de: " + clientes.front());
         clientes.dequeue(clientes.front());
-    }, 120000
+    }, 240000
 )
 
 setTimeout(
@@ -118,5 +118,5 @@ setTimeout(
     {
         console.log("Atendimento finalizado de: " + clientes.front());
         clientes.dequeue(clientes.front());
-    }, 120000
+    }, 360000
 )

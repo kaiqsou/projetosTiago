@@ -7,16 +7,15 @@ class Node {
 }
 
 class DoublyLinkedList {
-    constructor() {
+    constructor() 
+    {
         this.head = null;
         this.tail = null;
         this.length = 0;
         this.index = 0;
     }
 
-    
-
-    apprend(value) {
+    append(value) {
         const newNode = new Node(value);
 
         if (!this.head) {
@@ -84,6 +83,34 @@ class DoublyLinkedList {
         current.next = newNode;
 
         this.length++;
+    }
+
+    removeAt(index) {
+        let current = this.head;
+    
+        if (index === 1) 
+        {   
+            this.removeFirst();
+            return;
+        }
+    
+        if (index === this.length) 
+        {
+            this.removeLast();
+            return;
+        }
+    
+        for (let i = 1; i < index; i++) // encontra o nó a ser removido
+        {
+            current = current.next;
+        }
+    
+        current.prev.next = current.next;
+        current.next.prev = current.prev;
+    
+        this.length--;
+
+        return current.value;
     }
 }
 

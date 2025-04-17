@@ -89,34 +89,21 @@ Extra: calcule tempo total de espera se cada atendimento dura 2 minutos
 
 */
 
-const clientes = new Fila();
-clientes.enqueue("Kaique");
-console.log("Primeiro a ser atendido: " + clientes.back());
-clientes.enqueue("Marina");
-console.log("Segundo a ser atendido: " + clientes.back());
-clientes.enqueue("Tamires");
-console.log("Terceiro a ser atendido: " + clientes.back());
+const pedidos = new Fila();
+pedidos.enqueue("Kaique");
+console.log("Primeiro pedido: " + pedidos.back());
+pedidos.enqueue("Marina");
+console.log("Segundo pedido: " + pedidos.back());
+pedidos.enqueue("Tamires");
+console.log("Terceiro pedido: " + pedidos.back());
 
-setTimeout(
-    function()
-    {
-        console.log("Atendimento finalizado de: " + clientes.front());
-        clientes.dequeue(clientes.front());
-    }, 120000
-)
+let tempoPorPedido = 2; // em minutos
+let total = 0;
 
-setTimeout(
-    function()
-    {
-        console.log("Atendimento finalizado de: " + clientes.front());
-        clientes.dequeue(clientes.front());
-    }, 240000
-)
+while(!pedidos.isEmpty())
+{
+    let pedidoAtendido = pedidos.dequeue();
+    total += tempoPorPedido;
+    console.log(`${pedidoAtendido} atendido(a). Tempo acumulado: ${total} minutos`);
+}
 
-setTimeout(
-    function()
-    {
-        console.log("Atendimento finalizado de: " + clientes.front());
-        clientes.dequeue(clientes.front());
-    }, 360000
-)

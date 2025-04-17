@@ -4,17 +4,17 @@ da base. Simule essa sequência com uma pilha e peça para exibir a ordem de
 retorno à nave.
 */
 
-class Naves
+class Modulos
 {
     constructor()
     {
-        this.naves = [];
+        this.modulos = [];
         this.ordem = 0;
     }
 
     push(elemento)
     {
-        this.naves[this.ordem] = elemento;
+        this.modulos[this.ordem] = elemento;
         this.ordem++;
     }
 
@@ -25,30 +25,28 @@ class Naves
             return undefined;
         }
 
-        const ultimaNave = this.naves[this.ordem - 1];
-        delete this.naves[this.ordem - 1];
+        const ultimoModulo = this.modulos[this.ordem - 1];
+        delete this.modulos[this.ordem - 1];
         this.ordem--;
 
-        return ultimaNave;
+        return ultimoModulo;
     }
 
-    topo()
+    top()
     {
         if (this.ordem === 0) 
         {
             return undefined;
         }
-        return this.naves[this.ordem - 1];
+        return this.modulos[this.ordem - 1];
     }
 }
 
-let pousada = new Naves();
+let pousada = new Modulos();
 
-pousada.push("Nave 1");
-pousada.push("Nave 2");
-pousada.push("Nave 3");
-console.log("A próxima nave a sair será... " + pousada.topo());
-pousada.pop();
-console.log("A próxima nave a sair será... " + pousada.topo());
-pousada.pop();
-console.log("A próxima nave a sair será... " + pousada.topo());
+pousada.push("Módulo Alpha");
+pousada.push("Módulo Beta");
+pousada.push("Módulo Gama");
+console.log("Retornando... " + pousada.pop());
+console.log("Retornando... " + pousada.pop());
+console.log("Retornando... " + pousada.pop());

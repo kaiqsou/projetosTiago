@@ -108,3 +108,12 @@ no início da lista e os valores 40, 50 e 60 no fim.
 
 const list = new LinkedList();
 
+list.insertAtBeginning(30);
+list.insertAtBeginning(20);
+list.insertAtBeginning(10);
+
+list.insertAtEnd(40);
+list.insertAtEnd(50);
+list.insertAtEnd(60);
+
+list.printList();

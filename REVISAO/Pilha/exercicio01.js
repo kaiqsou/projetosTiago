@@ -25,24 +25,6 @@ class cartasDeck
 
         return ultimaCarta;
     }
-/*
-    invert()
-    {
-        if (this.tamanho === 0)
-        {
-            return undefined;
-        }
-
-        let i = 0;
-        let valorSalvo = 0;
-        for (i= 0; i < this.tamanho; i++)
-        {
-            valorSalvo = this.elemento[this.tamanho];
-            this.elemento[this.tamanho] = this.elemento[this.tamanho];
-            this.elemento[this.tamanho] = valorSalvo;
-        }
-    }
-*/
 }
 
 /*
@@ -55,20 +37,20 @@ Desafio extra: inverter a ordem da pilha usando uma segunda pilha.
 
 */
 
-let cartas = new cartasDeck();
-console.log("Embaralhando...");
-cartas.push("B");
-cartas.push("C");
-cartas.push("D");
-cartas.push("A");
-cartas.push("E");
-console.log("Carta removida: " + cartas.pop());
+// usar stack ou estoque, em caso de stack: especificar stack.cartas depois no valor
+let stack = new cartasDeck();
+let estoque = [];
+let cartas = ['A', 'B', 'C', 'D', 'E'];
 
-let cartasInversas = new cartasDeck();
-console.log("Invertendo...");
-cartasInversas.push("E");
-cartasInversas.push("A");
-cartasInversas.push("D");
-cartasInversas.push("C");
-cartasInversas.push("B");
-console.log("Carta removida: " + cartasInversas.pop());
+// empilhando
+for (let carta of cartas)
+{
+    stack.push(carta);
+}
+console.log("Piha completa: " + stack.cartas);
+
+// desempilhando
+while (stack.tamanho > 0)
+{
+    console.log("Retirando carta: " + stack.pop());
+}

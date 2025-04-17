@@ -97,14 +97,40 @@ class LinkedList
     }
 }
 
+const nomes = new LinkedList();
+nomes.insertAtBeginning("Kaique");
+nomes.insertAtEnd("Marina");
+nomes.insertAtEnd("José");
+nomes.insertAtEnd("Yasmin");
+nomes.printList();
+
 /*
 
 a) Remover um valor específico
 – Implemente a remoção de um valor específico e teste a remoção de
 diferentes valores da lista encadeada.
 
+*/
+
+console.log("Removendo José...")
+nomes.removeByValue("José");
+nomes.printList();
+
+/*
+
 b) Buscar um valor na lista
 – Implemente uma função de busca e teste-a para verificar se um valor
 está presente na lista.
 
 */
+
+console.log("Procurando 'Marina'...")
+if (nomes.find("Marina"))
+{
+    let nome = nomes.find("Marina");
+    console.log(nome.value + " encontrado(a)!");
+}
+else
+{
+    console.log("Não foi encontrado(a)!");
+}

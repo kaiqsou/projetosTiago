@@ -90,51 +90,25 @@ está sendo atendido e o tempo restante.
 
 */
 
-const criancas = new Fila();
+const fila = new Fila();
 
-criancas.enqueue("Kaique");
-console.log("Entrou na fila: " + criancas.back())
-criancas.enqueue("Marina");
-console.log("Entrou na fila: " + criancas.back())
-criancas.enqueue("Cássia");
-console.log("Entrou na fila: " + criancas.back())
-criancas.enqueue("Yasmin");
-console.log("Entrou na fila: " + criancas.back())
-criancas.enqueue("Tamires");
-console.log("Entrou na fila: " + criancas.back())
+fila.enqueue("Kaique");
+fila.enqueue("Marina");
+fila.enqueue("Yasmin");
+
+while (!fila.isEmpty())
+{
+    let tempo = Math.floor(Math.random() * 3000) + 1000;
+    console.log(`Brincando: ${fila.dequeue()} por ${tempo}ms`);
+}
+
+/*
 
 setTimeout(
     function()
     {
-        console.log("Terminou de brincar: " + criancas.front());
-        criancas.dequeue(criancas.front());
+        console.log("Terminou de brincar: " + fila.front());
+        fila.dequeue(fila.front());
     }, 3000);
 
-setTimeout(
-    function()
-    {
-        console.log("Terminou de brincar: " + criancas.front());
-        criancas.dequeue(criancas.front());
-    }, 6000);
-
-setTimeout(
-    function()
-    {
-        console.log("Terminou de brincar: " + criancas.front());
-        criancas.dequeue(criancas.front());
-    }, 9000);
-
-setTimeout(
-    function()
-    {
-        console.log("Terminou de brincar: " + criancas.front());
-        criancas.dequeue(criancas.front());
-    }, 12000);
-
-setTimeout(
-    function()
-    {
-        console.log("Terminou de brincar: " + criancas.front());
-        criancas.dequeue(criancas.front());
-    }, 15000);
-
+*/

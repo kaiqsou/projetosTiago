@@ -141,3 +141,5 @@ list.traverse();
 
 console.log("Percorrendo em ordem inversa:");
 list.traverseReverse();
+
+module.exports = DoublyLinkedList;

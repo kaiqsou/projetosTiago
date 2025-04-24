@@ -84,3 +84,5 @@ minha_variavel.enqueue("Cliente 4");
 
 console.log(minha_variavel.size());    // Saída: 2 (Cliente 3 e Cliente 4 ainda estão na fila)
 console.log(minha_variavel.front());   // Saída: "Cliente 3"
+
+module.exports = Fila;

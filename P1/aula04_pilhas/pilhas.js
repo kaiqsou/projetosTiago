@@ -1,4 +1,4 @@
-class MinhaPilha {
+class Pilha {
 
     constructor()
     {
@@ -55,7 +55,7 @@ class MinhaPilha {
 }
 
 // exemplo de uso
-let variavel = new MinhaPilha();
+let variavel = new Pilha();
 variavel.adicionar(10);
 variavel.adicionar(20);
 variavel.adicionar(30);
@@ -64,6 +64,8 @@ console.log(variavel.topo());   // Saída: 30 (elemento no topo)
 console.log(variavel.remover());   // Saída: 30 (remove o elemento no topo)
 console.log(variavel.topo());   // Saída: 20 (agora o topo é 20)
 console.log(variavel.tamanhoPilha());   // Saída: 2 (dois elementos restantes)
+
+module.exports = Pilha;
 
 
 

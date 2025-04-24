@@ -101,3 +101,5 @@ class LinkedList
         console.log(list + 'null');
     }
 }
+
+module.exports = LinkedList;

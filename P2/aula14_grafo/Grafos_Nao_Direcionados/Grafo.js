@@ -76,6 +76,17 @@ class Grafo
             console.log(`${vertice} -> ${this.adjacencia[vertice].join(', ')}`);
         }
     }
+
+    vizinhosDoVertice(vertice) 
+    {
+        if (!this.adjacencia[vertice]) {
+            console.log(`O vértice ${vertice} não existe no grafo.`);
+            return [];
+        }
+        console.log(`Vizinhos de ${vertice}: ${this.adjacencia[vertice].join(', ')}`);
+        return this.adjacencia[vertice]; 
+    }
+
 }   // fecha a classe Grafo
 
 module.exports = Grafo;

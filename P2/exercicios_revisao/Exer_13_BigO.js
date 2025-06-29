@@ -22,9 +22,43 @@ interpolacao(): Pior caso é O(n). Embora seu caso médio em dados uniformes sej
 * médio em dados uniformes é extremamente rápido.
 
 
-O(1) -> faz uma busca direta no array pelo índice
-O(n) -> um for normal
-O(n^2) -> um for dentro de um for
-O(n log n)
-O(2ⁿ)
+O(1) → tempo constante
+Ex: Acessa diretamente o índice de um array.
+arr[5] → só um passo, não importa o tamanho.
+
+O(n) → linear
+Um for simples percorrendo todos os elementos.
+for (i = 0; i < n; i++)
+
+O(n²) → quadrática
+Um for dentro de outro for, comparando tudo com tudo.
+for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++)
+	
+O(log n) → logarítmica
+Vai cortando o problema pela metade a cada passo.
+Ex: Busca binária.
+
+O(n log n) → linear-logarítmica
+Um for com uma operação logarítmica dentro.
+Ex: Algoritmos de ordenação eficientes como Merge Sort ou Quick Sort.
+
+O(2ⁿ) → exponencial
+O número de passos dobra a cada novo elemento.
+Ex: Resolver todos os subconjuntos possíveis (recursão pesada, como em problemas de Backtracking).
+
+O(n!) → fatorial
+Tenta todas as permutações possíveis.
+Ex: Problemas como o Caixeiro Viajante (TSP), usando força bruta
+
+O(n³) → cúbica
+Três for aninhados.
+Ex: Algoritmos que lidam com matrizes 3D ou grafos densos.
+
+O(√n) → raiz quadrada
+Útil em algoritmos como verificação de primos (trial division até √n).
+
+O(n^k) → polinomial
+k é uma constante maior que 1. Muito usado em problemas de complexidade média.
+
 */
